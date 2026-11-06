@@ -1,0 +1,40 @@
+/* Tema claro y oscuro */
+
+// Bootstrap 5.3 guarda sus colores en variables CSS (las --bs-...).
+// En vez de modificar su archivo, cambio esas variables aquí y como
+// style.css se carga después de bootstrap.min.css, mis valores ganan.
+// Los #{} sirven para meter una variable de Sass dentro de una variable CSS.
+
+// Modo claro: es el que tiene <html> al cargar la página
+[data-bs-theme="light"] {
+  --bs-body-color: #{$marino};
+  --bs-body-font-family: #{$fuente-texto};
+  --bs-border-radius: 0; // quito las esquinas redondeadas porque en Figma son rectas
+  --bs-link-color-rgb: 10, 25, 47; // el marino en RGB, Bootstrap lo pide así
+}
+
+// Modo oscuro: el JS cambia el atributo de <html> a "dark" y se aplica esto
+[data-bs-theme="dark"] {
+  --bs-body-bg: #{$marino};
+  --bs-body-color: #{$hueso};
+  --bs-body-font-family: #{$fuente-texto};
+  --bs-border-radius: 0;
+
+  // Mis componentes no usan las variables de Bootstrap,
+  // así que les cambio el fondo y el borde a mano
+  .cabecera,
+  .pie,
+  .tarjeta,
+  .formulario {
+    background-color: $marino-claro;
+    border-color: $hueso;
+  }
+}
+
+// Todos los títulos con la fuente de titulares del UI Kit
+h1,
+h2,
+h3 {
+  font-family: $fuente-titulos;
+  font-weight: 700;
+}

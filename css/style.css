@@ -1,0 +1,179 @@
+@charset "UTF-8";
+/* Tema claro y oscuro */
+[data-bs-theme=light] {
+  --bs-body-color: #0A192F;
+  --bs-body-font-family: Inter, sans-serif;
+  --bs-border-radius: 0;
+  --bs-link-color-rgb: 10, 25, 47;
+}
+
+[data-bs-theme=dark] {
+  --bs-body-bg: #0A192F;
+  --bs-body-color: #F4F4F0;
+  --bs-body-font-family: Inter, sans-serif;
+  --bs-border-radius: 0;
+}
+[data-bs-theme=dark] .cabecera,
+[data-bs-theme=dark] .pie,
+[data-bs-theme=dark] .tarjeta,
+[data-bs-theme=dark] .formulario {
+  background-color: #13294B;
+  border-color: #F4F4F0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+/* Botones */
+.btn-primary {
+  --bs-btn-bg: #FF4500;
+  --bs-btn-border-color: #FF4500;
+  --bs-btn-hover-bg: #0A192F;
+  --bs-btn-hover-border-color: #0A192F;
+  --bs-btn-hover-color: #FF4500;
+  --bs-btn-active-bg: #0A192F;
+  --bs-btn-active-border-color: #0A192F;
+  --bs-btn-active-color: #FF4500;
+}
+.btn-primary:focus-visible {
+  outline: 3px solid #FF4500;
+  outline-offset: 2px;
+}
+
+.boton-icono {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+  color: #FF4500;
+  white-space: nowrap;
+  background: none;
+  border: 2px solid transparent;
+}
+.boton-icono:hover {
+  opacity: 0.7;
+}
+.boton-icono:focus-visible {
+  outline: 3px solid #FF4500;
+}
+
+.boton-contorno {
+  display: block;
+  width: 100%;
+  padding: 0.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  color: #0A192F;
+  text-align: center;
+  text-decoration: none;
+  background-color: #F4F4F0;
+  border: 2px solid #0A192F;
+  box-shadow: 6px 6px 0 #0A192F;
+}
+.boton-contorno:hover {
+  box-shadow: 6px 6px 0 #FF4500;
+}
+
+/* Estructura: cabecera, paneles laterales y pie */
+.cabecera {
+  background-color: #F4F4F0;
+}
+
+.cabecera__logo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FF4500;
+  text-decoration: none;
+}
+
+.cabecera__contador {
+  font-size: 0.75rem;
+  vertical-align: top;
+  background-color: #0A192F;
+}
+
+.panel__titulo {
+  flex-grow: 1;
+  padding: 0.5rem;
+  text-align: center;
+  border: 2px solid currentColor;
+}
+
+.pie {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  background-color: #F4F4F0;
+  border-top: 2px solid #0A192F;
+}
+
+/* Contenido principal: ofertas y cesta */
+.titulo-seccion {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+}
+
+.tarjeta {
+  height: 100%;
+  text-align: center;
+  background-color: #F4F4F0;
+  border: 2px solid #0A192F;
+  box-shadow: 6px 6px 0 #0A192F;
+}
+.tarjeta:hover {
+  box-shadow: 6px 6px 0 #FF4500;
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: #FFFFFF;
+}
+
+.tarjeta__cuerpo {
+  padding: 1rem;
+}
+
+.tarjeta__titulo {
+  font-size: 1.25rem;
+}
+
+.producto-cesta {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 2px solid currentColor;
+  box-shadow: 6px 6px 0 #FF4500;
+}
+
+/* Página de registro */
+.formulario {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #F4F4F0;
+  border: 2px solid #0A192F;
+  box-shadow: 6px 6px 0 #FF4500;
+}
+@media (min-width: 768px) {
+  .formulario {
+    padding: 2.5rem;
+  }
+}
+
+.form-control:focus,
+.form-check-input:focus {
+  border-color: #FF4500;
+  box-shadow: 0 0 0 0.2rem rgba(255, 69, 0, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #FF4500;
+  border-color: #FF4500;
+}

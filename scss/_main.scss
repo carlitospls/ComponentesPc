@@ -1,0 +1,49 @@
+/* Contenido principal: ofertas y cesta */
+
+// Título "< Ofertas". En móvil más pequeño y a partir de tablet más grande
+.titulo-seccion {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+
+  @include desde(768px) {
+    font-size: 2rem;
+  }
+}
+
+// Tarjeta de producto. El tamaño de cada tarjeta lo controla el grid de
+// Bootstrap en el HTML (col-12 col-md-6 col-lg-4), aquí solo va el aspecto.
+.tarjeta {
+  height: 100%; // así todas las tarjetas de una fila miden lo mismo
+  text-align: center;
+  background-color: $hueso;
+  border: 2px solid $marino;
+  @include sombra-dura($marino);
+
+  // Estado hover del UI Kit: la sombra pasa a naranja
+  &:hover {
+    @include sombra-dura($naranja);
+  }
+}
+
+.tarjeta__imagen {
+  width: 100%;
+  height: auto; // mantiene la proporción de la imagen
+  padding: 1rem;
+  background-color: $blanco;
+}
+
+.tarjeta__cuerpo {
+  padding: 1rem;
+}
+
+.tarjeta__titulo {
+  font-size: 1.25rem;
+}
+
+// Cada producto dentro del panel de la cesta (lo crea el JS)
+.producto-cesta {
+  margin-bottom: 1rem;
+  padding: .75rem;
+  border: 2px solid currentColor;
+  @include sombra-dura($naranja);
+}

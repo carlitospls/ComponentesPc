@@ -1,0 +1,39 @@
+/* Estructura: cabecera, paneles laterales y pie */
+
+// Para los nombres de clase uso BEM: bloque__elemento.
+// Por ejemplo cabecera__logo es "el logo de la cabecera".
+
+.cabecera {
+  background-color: $hueso;
+}
+
+.cabecera__logo {
+  font-family: $fuente-titulos;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $naranja;
+  text-decoration: none;
+}
+
+// El numerito de productos que sale encima del carrito
+.cabecera__contador {
+  font-size: .75rem;
+  vertical-align: top;
+  background-color: $marino;
+}
+
+// Título de los paneles de Categorías y Mi cesta, metido en una caja como en Figma.
+// flex-grow: 1 hace que ocupe todo el hueco que deja el botón de cerrar.
+.panel__titulo {
+  flex-grow: 1;
+  padding: .5rem;
+  text-align: center;
+  border: 2px solid currentColor; // currentColor = mismo color que el texto
+}
+
+.pie {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  background-color: $hueso;
+  border-top: 2px solid $marino;
+}

@@ -1,0 +1,15 @@
+// Un mixin es un bloque de CSS que escribo una vez y reutilizo con @include.
+
+// Media query mobile-first: los estilos de dentro se aplican
+// a partir del ancho que le paso. Ej: @include desde(768px) { ... }
+@mixin desde($ancho) {
+  @media (min-width: $ancho) {
+    @content;
+  }
+}
+
+// Sombra sin difuminar, desplazada 6px, que es el estilo de mis tarjetas en Figma.
+// Le paso el color porque en hover cambia de marino a naranja.
+@mixin sombra-dura($color) {
+  box-shadow: 6px 6px 0 $color;
+}

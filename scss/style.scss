@@ -1,0 +1,15 @@
+// Este es el único archivo sin guion bajo, por eso Live Sass Compiler
+// solo compila este y genera css/style.css. Los demás son partials.
+// Bootstrap no lo importo aquí: lo enlazo aparte en el HTML (bootstrap.min.css)
+// y así en style.css solo queda mi código.
+
+// Primero variables y mixins, porque el resto de archivos los usa
+@import "variables";
+@import "mixins";
+
+// Después los estilos, cada parte de la web en su archivo
+@import "theme";
+@import "botones";
+@import "layout";
+@import "main";
+@import "formulario";

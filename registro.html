@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear cuenta | ComponentesPC</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@700&amp;display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- CABECERA reducida: solo logo y cambio de tema -->
+  <header class="cabecera">
+    <div class="container d-flex align-items-center justify-content-between py-2">
+      <a class="cabecera__logo" href="index.html">
+        <img src="img/iconos/logo.svg" alt="" height="36" class="align-middle"> ComponentesPC
+      </a>
+      <button id="boton-tema" class="boton-icono" type="button" aria-label="Cambiar tema">
+        <i class="bi bi-moon-fill" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="row justify-content-center">
+      <!-- Ancho del formulario: 12 columnas en móvil, 8 en tablet, 5 en escritorio -->
+      <section class="col-12 col-md-8 col-lg-5 formulario">
+        <h1 class="h2 mb-4">Crear cuenta</h1>
+
+        <!-- novalidate: la validación la hace script.js, no el navegador -->
+        <form id="form-registro" novalidate>
+
+          <div class="mb-3">
+            <label for="usuario" class="form-label">Nombre de usuario</label>
+            <input type="text" id="usuario" class="form-control">
+            <div id="usuario-error" class="invalid-feedback"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" id="email" class="form-control">
+            <div id="email-error" class="invalid-feedback"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" id="password" class="form-control">
+            <div class="form-text">Mínimo 8 caracteres, una mayúscula y un número.</div>
+            <div id="password-error" class="invalid-feedback"></div>
+          </div>
+
+          <div class="mb-3">
+            <label for="repetir" class="form-label">Repite la contraseña</label>
+            <input type="password" id="repetir" class="form-control">
+            <div id="repetir-error" class="invalid-feedback"></div>
+          </div>
+
+          <div class="form-check mb-4">
+            <input type="checkbox" id="condiciones" class="form-check-input">
+            <label for="condiciones" class="form-check-label">Acepto las condiciones de uso</label>
+            <div id="condiciones-error" class="invalid-feedback"></div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Crear cuenta</button>
+          <p id="mensaje-ok" class="text-success-emphasis fw-semibold mt-3 mb-0"></p>
+        </form>
+
+        <p class="mt-4 mb-0 text-center">¿Ya tienes cuenta? <a href="#">Inicia sesión</a></p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="container">
+      <p class="mb-0">&copy; 2026 ComponentesPC · Carlos Francisco Jaén Palacios (2º DAW)</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
