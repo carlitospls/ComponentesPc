@@ -81,11 +81,13 @@ En esta entrega los recursos están preparados y optimizados, pero todavía no s
 
 | Recurso | Original (`media-bruto/`) | Optimizado (`src/media/`) | Reducción |
 |---|---|---|---|
-| gpu | 4.492 × 2.902 px · 4,57 MB (JPG) | 800 × 600 px · _ KB (WebP) | _ % |
-| cpu | 4.591 × 2.775 px · 9,45 MB (JPG) | 800 × 600 px · _ KB (WebP) | _ % |
-| disipador | 4.519 × 3.500 px · 4,67 MB (JPG) | 800 × 600 px · _ KB (WebP) | _ % |
-| logo | _ KB (export de Figma) | 893 B (SVG limpio) | _ % |
-| vídeo | 1920 × 1080 · 45 s · 12,55 MB (WebM) | 1280 × 720 · ~12 s · _ MB (MP4) | _ % |
-| sonido | _ KB (OGG) | _ KB (MP3 128 kbps) | _ % |
+| gpu | 2.576 × 1.664 px · 327 KB (JPG) | 800 × 600 px · 31,9 KB (WebP) | 90,2 % |
+| cpu | 2.576 × 1.557 px · 913 KB (JPG) | 800 × 600 px · 39,8 KB (WebP) | 95,6 % |
+| disipador | 2.576 × 1.995 px · 261 KB (JPG) | 800 × 600 px · 15,8 KB (WebP) | 93,9 % |
+| logo | 708 B (export directo de Figma) | 508 B (SVG optimizado) | 28,2 % |
+| vídeo | 1920 × 1080 · 45 s · 12,55 MB (WebM, 2,3 Mbps) | 1280 × 720 · 12 s · 0,87 MB (MP4, 0,6 Mbps) | 93,1 % |
+| sonido | 8,8 KB (OGG, 240 kbps) | 5,8 KB (MP3, 128 kbps CBR) | 34,3 % |
+
+En el vídeo, parte de la reducción viene de recortarlo de 45 s a 12 s. Comparando por segundo, el bitrate baja de 2,3 Mbps a 0,6 Mbps (un 74 % menos).
 
 Autores y licencias: ver [LICENCIAS.md](LICENCIAS.md).

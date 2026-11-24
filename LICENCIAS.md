@@ -25,25 +25,25 @@ Todos los recursos multimedia del proyecto son de **dominio público (CC0)**, ti
   - **BY:** hay que citar al autor y la licencia. Lo hago en este documento y lo haré en el pie de la web.
   - **SA:** las versiones modificadas tienen que compartirse con la misma licencia. Por eso mis WebP recortados y comprimidos también quedan bajo **CC BY-SA 4.0**.
   - Permite modificar la obra y no tiene cláusula NC, así que también se podría usar en una tienda real.
-- **Modificaciones:** recorte a proporción 4:3, reescalado a 800 × 600 px, exportación a WebP (calidad 80 %) y eliminación de los metadatos Exif.
-- **Originales en el repo:** `media-bruto/img/`.
+- **Modificaciones:** encuadre a proporción 4:3 (en la GPU y el disipador, recortando; en el procesador, quedándome solo con la cara delantera y ampliando el lienzo con el mismo color de fondo), reescalado a 800 × 600 px, exportación a WebP (calidad 80 %) y eliminación de los metadatos Exif.
+- **Originales en el repo:** `media-bruto/img/` (`gpu-original.jpg`, `cpu-original.jpg` y `disipador-original.jpg`). Son copias de 2.576 px de ancho de los archivos de Commons, cuyo original completo mide entre 4.500 y 4.600 px y pesa entre 4,6 y 9,5 MB.
 
 ### Logo
 
 - **Autor:** yo mismo. Lo diseñé en Figma para el UI Kit de la práctica RA1.
 - **Licencia:** obra propia, sin recursos de terceros.
-- **Modificaciones:** el export directo de Figma está en `media-bruto/img/logo-figma.svg`. La versión final es un SVG limpio: solo contiene `<path>` con el color del UI Kit, sin metadatos ni imágenes bitmap incrustadas.
+- **Modificaciones:** el export directo de Figma está en `media-bruto/img/logo-figma.svg`. La versión final (`src/media/img/logo.svg`) está optimizada: coordenadas redondeadas a 2 decimales y sin atributos ni espacios sobrantes, manteniendo el `viewBox` para que escale bien. Pasa de 708 B a 508 B y no tiene imágenes bitmap incrustadas.
 
 ### Vídeo de cabecera
 
 - **Original:** `Hardware Bug - Stop motion test Nº1.webm` (WebM VP8, 1920 × 1080, 45 s), de Wikimedia Commons. Es un stop motion de un disco duro SCSI desmontado.
 - **Autor:** Diego Alifano. Se publicó primero en YouTube con licencia Creative Commons Atribución, y Commons verificó esa licencia.
 - **Licencia:** CC BY 3.0. Permite modificar y usar el vídeo citando al autor.
-- **Modificaciones:** recorte a unos 12 s, reescalado a 720p, recodificación a MP4 (H.264, calidad constante RF 23, optimizado para web) y eliminación de la pista de audio, porque el vídeo va en silencio.
+- **Modificaciones:** recorte de los segundos 24 a 36 (12 s, la parte de los platos, sin el título inicial), reescalado a 720p y recodificación a MP4 (H.264, calidad constante RF 23, optimizado para web). Se exporta sin pista de audio porque el vídeo va de fondo y en silencio.
 
 ### Sonido de la cesta
 
-- **Original:** un archivo del pack *Interface Sounds* de Kenney (kenney.nl).
+- **Original:** `confirmation_001.ogg`, del pack *Interface Sounds* de Kenney (kenney.nl). El `License.txt` del pack indica CC0.
 - **Autor:** Kenney.
 - **Licencia:** CC0 1.0, dominio público. No es obligatorio citarlo, pero lo cito igualmente.
-- **Modificaciones:** recorte, fade in y fade out cortos, normalización y exportación a MP3 a 128 kbps constantes (CBR).
+- **Modificaciones:** recorte de los silencios del principio y del final, fade in de 10 ms y fade out de 50 ms (el sonido dura 0,3 s, así que un fade más largo se lo comería), normalización a −1 dB de pico y exportación a MP3 a 128 kbps constantes (CBR).
